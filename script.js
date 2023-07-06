@@ -21,3 +21,11 @@ function multiply(...args) {
     })
     return result
 };
+
+function divide(...args) {
+    result = 1;
+    args.forEach(arg => {
+        result /= arg
+    })
+    return result
+};
