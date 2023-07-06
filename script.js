@@ -1,5 +1,5 @@
 function add(...args) {
-    result = 0;
+    let result = 0;
     args.forEach(arg => {
         result += arg
     })
@@ -7,7 +7,7 @@ function add(...args) {
 };
 
 function subtract(...args) {
-    result = 0;
+    let result = 0;
     args.forEach(arg => {
         result -= arg
     })
@@ -15,7 +15,7 @@ function subtract(...args) {
 };
 
 function multiply(...args) {
-    result = 1;
+    let result = 1;
     args.forEach(arg => {
         result *= arg
     })
@@ -23,7 +23,7 @@ function multiply(...args) {
 };
 
 function divide(...args) {
-    result = 1;
+    let result = 1;
     args.forEach(arg => {
         result /= arg
     })
