@@ -13,3 +13,11 @@ function subtract(...args) {
     })
     return result
 };
+
+function multiply(...args) {
+    result = 1;
+    args.forEach(arg => {
+        result *= arg
+    })
+    return result
+};
