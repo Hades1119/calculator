@@ -16,5 +16,73 @@ body {
     width: 630px;
     background-color: gray;
     border-radius: 15px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
+.calcDisplay {
+    background-color: rgb(194, 194, 194);
+    flex: 1.5 0;
+    border-radius: 15px;
+}
+
+.calcBottom {
+    border-radius: 15px;
+    flex: 4 0;
+
+    display: flex;
+    gap: 15px;
+}
+
+.calcCol {
+    flex: 1 0;
+}
+
+.calcRowBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 4;
+}
+
+.calcRows {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+
+.calcCol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calcBtns {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgb(233,233,233);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(66, 66, 66), inset 3px 3px 5px white, inset -3px -3px 5px rgb(148,148,148);
+}
+
+#clearBtn {
+    background-color: orange;
+    box-shadow: 3px 3px 3px rgb(66, 66, 66), inset 3px 3px 5px rgb(243, 192, 98), inset -3px -3px 5px rgb(202, 101, 6);
+}
+
+#equalsBtn {
+    background-color: rgb(16, 99, 224);
+    box-shadow: 3px 3px 3px rgb(66, 66, 66), inset 3px 3px 5px rgb(87, 146, 255), inset -3px -3px 5px rgb(12, 63, 204);
+    flex: 2.2;
+}
+
+#zeroBtn {
+    flex: 2.1;
+}
