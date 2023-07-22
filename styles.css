@@ -9,6 +9,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 
 .calcBody {
@@ -21,12 +22,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    box-shadow: inset 0px 0px 15px rgb(73, 73, 73), inset 3px 3px 8px rgb(255, 255, 255) ;
 }
 
 .calcDisplay {
     background-color: rgb(194, 194, 194);
     flex: 1.5 0;
     border-radius: 15px;
+    box-shadow: inset 0px 0px 10px;
 }
 
 .calcBottom {
