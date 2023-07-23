@@ -39,7 +39,7 @@ function operate(num1, operand, num2) {
 
 /* Function to add numbers to display based on button press */
 function addToDisplay(num) {
-    if (displayNum.innerText.length >= 8) {
+    if (displayNum.innerText.length >= 5) {
         displayNum.innerText += "";
     } else {
         displayNum.innerText += num;
