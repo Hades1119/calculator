@@ -12,6 +12,9 @@ function multiply(num1, num2) {
 };
 
 function divide(num1, num2) {
+    if (num1 == 0 || num2 == 0) {
+        return updateDisplay("Cannot Divide 0")
+    }
     return (num1 / num2);
 };
 
@@ -24,25 +27,55 @@ let displayNum = document.querySelector(".display") ;/* Grabs starting display n
 function operate(num1, operand, num2) {
     switch (operand) {
         case "+":
-            add(num1, num2);
-            break;
+            return add(num1, num2);
         case "-":
-            subtract(num1, num2);
-            break;
+            return subtract(num1, num2);
         case "*":
-            multiply(num1, num2);
-            break;
+            return multiply(num1, num2);
         case "/":
-            divide(num1, num2);
-            break;
+            return divide(num1, num2);
     };
 };
 
 /* Function to add numbers to display based on button press */
+function addToDisplay(num) {
+    if (displayNum.innerText.length >= 8) {
+        displayNum.innerText += "";
+    } else {
+        displayNum.innerText += num;
+    };
+}
+
 function updateDisplay(num) {
     displayNum.innerText = num;
 };
 
+
 /* Clear Button Function */
 const clearBtn = document.querySelector("#clearBtn");
 clearBtn.addEventListener("click", () => {updateDisplay("")});
+
+const numBtns = document.querySelectorAll(".numBtn");
+numBtns.forEach(button => {
+    button.addEventListener("click", () => {
+        addToDisplay(button.innerText)
+    })
+})
+
+const operandBtns = document.querySelectorAll(".operand");
+operandBtns.forEach(button => {
+    button.addEventListener("click", (event) => {
+        num1 = parseInt(displayNum.innerText);
+        operand = event.target.innerText;
+        updateDisplay("")
+    })
+})
+
+const equalBtn = document.querySelector("#equalsBtn")
+equalBtn.addEventListener("click", (event) => {
+    num2 = parseInt(displayNum.innerText);
+    const result = operate(num1, operand ,num2);
+    updateDisplay(result);
+})
+
+
