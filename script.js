@@ -17,7 +17,7 @@ function divide(num1, num2) {
 
 /* Initial Variables */
 let firstNum,operand,secondNum;
-let displayNum = document.querySelector("")
+let displayNum = document.querySelector(".display").innerText; /* Grabs starting display numbers */
 
 
 /* Operate Function */
