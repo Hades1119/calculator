@@ -1,5 +1,4 @@
 /* Operand Functions to handle expression */
-
 function add(num1, num2) {
     return (num1 + num2);
 };
@@ -17,10 +16,11 @@ function divide(num1, num2) {
 };
 
 /* Initial Variables */
-
 let firstNum,operand,secondNum;
 let displayNum = document.querySelector("")
 
+
+/* Operate Function */
 function operate(num1, operand, num2) {
     switch (operand) {
         case "+":
