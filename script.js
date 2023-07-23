@@ -19,7 +19,7 @@ function divide(num1, num2) {
 };
 
 /* Initial Variables */
-let firstNum,operand,secondNum;
+let firstNum,operand,secondNum,result=0;
 let displayNum = document.querySelector(".display") ;/* Grabs starting display numbers */
 
 
@@ -46,6 +46,7 @@ function addToDisplay(num) {
     };
 }
 
+/* Function to update whole display value*/
 function updateDisplay(num) {
     displayNum.innerText = num;
 };
@@ -55,6 +56,7 @@ function updateDisplay(num) {
 const clearBtn = document.querySelector("#clearBtn");
 clearBtn.addEventListener("click", () => {updateDisplay("")});
 
+/* Function to add event listeners to each number button and add the number to display */
 const numBtns = document.querySelectorAll(".numBtn");
 numBtns.forEach(button => {
     button.addEventListener("click", () => {
@@ -62,6 +64,7 @@ numBtns.forEach(button => {
     })
 })
 
+/* Function to add event listeners to each operand button and set first num variable and operand variable */
 const operandBtns = document.querySelectorAll(".operand");
 operandBtns.forEach(button => {
     button.addEventListener("click", (event) => {
@@ -71,10 +74,11 @@ operandBtns.forEach(button => {
     })
 })
 
+/* Function to add an event listener to the equals button and add second num variable as well as executing the operate function and updating the display */
 const equalBtn = document.querySelector("#equalsBtn")
 equalBtn.addEventListener("click", (event) => {
     num2 = parseInt(displayNum.innerText);
-    const result = operate(num1, operand ,num2);
+    result = operate(num1, operand ,num2);
     updateDisplay(result);
 })
 
