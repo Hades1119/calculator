@@ -96,3 +96,10 @@ equalBtn.addEventListener("click", () => {
 })
 
 
+/* Function for backspace or Deleting last character on display */
+const delBtn = document.querySelector("#delBtn");
+delBtn.addEventListener("click", () => {
+    const lastCharacter = displayNum.innerText.length - 1;
+    updateDisplay(displayNum.innerText.slice(0, lastCharacter))
+});
+
