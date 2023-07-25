@@ -25,12 +25,16 @@ function operate() {
         switch (operands[i]) {
             case "+":
                 result = add(result, numbers[i + 1]);
+                break;
             case "-":
-                subtract(result, numbers[i + 1]);
+                result = subtract(result, numbers[i + 1]);
+                break;
             case "*":
-                multiply(result, numbers[i + 1]);
+                result = multiply(result, numbers[i + 1]);
+                break;
             case "÷":
-                divide(result, numbers[i + 1]);
+                result = divide(result, numbers[i + 1]);
+                break
         };
     }
     return result;
