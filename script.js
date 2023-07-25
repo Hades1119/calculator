@@ -24,15 +24,16 @@ function operate() {
     for (let i = 0; i < operands.length; i++) {
         switch (operands[i]) {
             case "+":
-                return result = add(result, numbers[i + 1]);
+                result = add(result, numbers[i + 1]);
             case "-":
-                return subtract(result, numbers[i + 1]);
+                subtract(result, numbers[i + 1]);
             case "*":
-                return multiply(result, numbers[i + 1]);
-            case "/":
-                return divide(result, numbers[i + 1]);
+                multiply(result, numbers[i + 1]);
+            case "÷":
+                divide(result, numbers[i + 1]);
         };
     }
+    return result;
 };
 
 /* Function to add numbers to display based on button press */
@@ -58,8 +59,8 @@ let displayNum = document.querySelector(".display"); ;/* Grabs starting display 
 const clearBtn = document.querySelector("#clearBtn");
 clearBtn.addEventListener("click", () => {
     updateDisplay("")
-    firstNum = [];
-    operand = [];
+    numbers = [];
+    operands = [];
 });
 
 /* Function to add event listeners to each number button and add the number to display */
@@ -88,9 +89,13 @@ equalBtn.addEventListener("click", () => {
     if (displayNum.innerText != "") {
         numbers.push(parseInt(displayNum.innerText));
     }
-    result = operate();
-    numbers = [result];
-    updateDisplay(result);
+
+    if (numbers.length > 1) {
+        result = operate();
+        updateDisplay(result);        
+        numbers = [result];
+        operands = [];
+    }
 })
 
 
