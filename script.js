@@ -18,15 +18,6 @@ function divide(num1, num2) {
     return (num1 / num2);
 };
 
-/* Initial Variables */
-let firstNum = 0;
-let prevOperand = "";
-let operand = "";
-let secondNum = 0;
-let result=0;
-let displayNum = document.querySelector(".display"); ;/* Grabs starting display numbers */
-
-
 /* Operate Function */
 function operate(num1, operand, num2) {
     switch (operand) {
@@ -55,6 +46,13 @@ function updateDisplay(num) {
     displayNum.innerText = num;
 };
 
+/* Initial Variables */
+let firstNum = 0;
+let prevOperand = "";
+let operand = "";
+let secondNum = 0;
+let result=0;
+let displayNum = document.querySelector(".display"); ;/* Grabs starting display numbers */
 
 /* Clear Button Function */
 const clearBtn = document.querySelector("#clearBtn");
