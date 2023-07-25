@@ -37,6 +37,8 @@ function operate() {
                 break
         };
     }
+    numbers = [];
+    operands = [];
     return result;
 };
 
@@ -97,8 +99,6 @@ equalBtn.addEventListener("click", () => {
     if (numbers.length > 1) {
         result = operate();
         updateDisplay(result);        
-        numbers = [result];
-        operands = [];
     }
 })
 
